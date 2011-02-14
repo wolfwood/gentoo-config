@@ -1,0 +1,35 @@
+#!/bin/sh
+
+mount -t proc none /proc
+CMDLINE=`cat /proc/cmdline`
+
+mount -t sysfs none /sys
+
+#wait a little to avoid trailing kernel output
+sleep 3
+
+#If you don't have a qwerty keyboard, uncomment the next line 
+#loadkmap < /etc/kmap-fr
+
+#raid
+/bin/mdadm --assemble /dev/md0 /dev/sd[abcde]
+
+#If you have a msg, show it: 
+#cat /etc/msg
+
+#dm-crypt
+/bin/cryptsetup luksOpen /dev/md0 vault
+
+#lvm
+#/bin/vgscan
+/bin/vgchange -ay vg
+
+#root filesystem
+mount -r /dev/mapper/vg-root /newroot
+
+#unmount pseudo FS
+umount /sys
+umount /proc
+
+#root switch
+exec /bin/busybox switch_root /newroot /sbin/init ${CMDLINE}
