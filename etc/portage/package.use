@@ -1,0 +1,4 @@
+sys-fs/udev extras
+sys-fs/lvm2 -lvm1 static
+sys-fs/mdadm static
+sys-apps/busybox static
