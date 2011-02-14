@@ -2,3 +2,8 @@
 # scripts in /etc/init.d.  To create a more complete configuration,
 # please review /etc/conf.d/net.example and save your configuration
 # in /etc/conf.d/net (this file :]!).
+
+dns_domain_lo="local"
+
+config_eth0=( "192.168.0.3 netmask 255.255.255.0 brd 192.168.0.255" )
+routes_eth0=( "default via 192.168.0.1" )
