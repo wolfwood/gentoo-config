@@ -15,3 +15,5 @@ dev-libs/ppl lpsol
 dev-libs/DirectFB -sdl
 
 dev-db/sqlite secure-delete
+
+dev-vcs/subversion -dso
