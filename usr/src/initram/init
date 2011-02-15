@@ -1,35 +1,41 @@
 #!/bin/sh
 
-mount -t proc none /proc
+rescue_shell() {
+	echo "ejecting to a shell"
+	busybox --install -s
+	exec /bin/sh
+}
+
+mount -t proc none /proc || rescue_shell
 CMDLINE=`cat /proc/cmdline`
 
-mount -t sysfs none /sys
+mount -t sysfs none /sys || rescue_shell
 
 #wait a little to avoid trailing kernel output
-sleep 3
+sleep 3 || rescue_shell
 
 #If you don't have a qwerty keyboard, uncomment the next line 
 #loadkmap < /etc/kmap-fr
 
 #raid
-/bin/mdadm --assemble /dev/md0 /dev/sd[abcde]
+/bin/mdadm --assemble /dev/md0 /dev/sd[abcde] || rescue_shell
 
 #If you have a msg, show it: 
 #cat /etc/msg
 
 #dm-crypt
-/bin/cryptsetup luksOpen /dev/md0 vault
+/bin/cryptsetup luksOpen /dev/md0 vault || rescue_shell
 
 #lvm
 #/bin/vgscan
-/bin/vgchange -ay vg
+/bin/vgchange -ay vg || rescue_shell
 
 #root filesystem
-mount -r /dev/mapper/vg-root /newroot
+mount -r /dev/mapper/vg-root /newroot || rescue_shell
 
 #unmount pseudo FS
-umount /sys
-umount /proc
+umount /sys || rescue_shell
+umount /proc || rescue_shell
 
 #root switch
-exec /bin/busybox switch_root /newroot /sbin/init ${CMDLINE}
+exec /bin/busybox switch_root /newroot /sbin/init ${CMDLINE} || rescue_shell

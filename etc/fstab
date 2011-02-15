@@ -17,7 +17,7 @@
 /dev/sdg1		/boot		ext2		noauto,noatime	1 2
 /dev/mapper/vg-root	/		ext4		noatime		0 1
 /dev/mapper/vg-swap	none		swap		sw		0 0
-#/dev/mapper/vg-home	/home		ext4		noatime		0 1
+/dev/mapper/vg-home	/home		ext4		noatime		0 1
 
 #/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
 #/dev/fd0		/mnt/floppy	auto		noauto		0 0

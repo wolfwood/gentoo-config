@@ -3,7 +3,7 @@ sys-fs/udev extras
 # for static binaries to put on initramfs
 sys-fs/lvm2 -lvm1 static
 sys-fs/mdadm static
-sys-apps/busybox static -pam savedconfig
+sys-apps/busybox static -pam
 dev-libs/libgcrypt static-libs
 dev-libs/libgpg-error static-libs
 

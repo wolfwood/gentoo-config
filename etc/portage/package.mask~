@@ -1,0 +1,13 @@
+# sandbox violations
+#sys-apps/diffutils
+#sys-devel/bison
+#sys-apps/coreutils
+#app-arch/gzip
+#sys-apps/grep
+#sys-devel/autoconf
+
+# too many files passed to gcc
+dev-libs/openssl
+
+# other
+sys-apps/busybox
