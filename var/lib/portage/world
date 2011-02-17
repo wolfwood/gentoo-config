@@ -2,8 +2,10 @@ app-admin/emacs-updater
 app-admin/logrotate
 app-admin/sudo
 app-admin/syslog-ng
+app-arch/lzop
 app-editors/emacs
 app-editors/mg
+app-emulation/qemu-kvm
 app-misc/color
 app-misc/tmux
 app-portage/gentoolkit
@@ -24,6 +26,9 @@ media-sound/mpd
 media-sound/ncmpc
 media-video/nvidia-settings
 media-video/vlc
+net-analyzer/nmap
+net-irc/irssi
+net-p2p/transmission
 sys-apps/hdparm
 sys-apps/pciutils
 sys-apps/sandbox
@@ -44,6 +49,7 @@ www-client/links
 www-client/lynx
 www-client/uzbl
 www-plugins/adobe-flash
+x11-apps/xkill
 x11-apps/xrdb
 x11-base/xorg-drivers
 x11-base/xorg-server

@@ -14,7 +14,7 @@
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-/dev/sdg1		/boot		ext2		noauto,noatime	1 2
+/dev/sdf1		/boot		ext2		auto,noatime	1 2
 /dev/mapper/vg-root	/		ext4		noatime		0 1
 /dev/mapper/vg-swap	none		swap		sw		0 0
 /dev/mapper/vg-home	/home		ext4		noatime		0 1

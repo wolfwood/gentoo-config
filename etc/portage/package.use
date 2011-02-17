@@ -17,3 +17,5 @@ dev-libs/DirectFB -sdl
 dev-db/sqlite secure-delete
 
 dev-vcs/subversion -dso
+
+www-client/uzbl helpers
