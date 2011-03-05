@@ -8,14 +8,12 @@ dev-libs/libgcrypt static-libs
 dev-libs/libgpg-error static-libs
 
 # for loop optimization
-sys-devel/gcc graphite lto
+sys-devel/gcc graphite 
+#lto
+dev-libs/ppl lpsol
 
-dev-libs/ppl lpsol 
-
-dev-libs/DirectFB -sdl
-
+# browser hax
 dev-db/sqlite secure-delete
+www-client/uzbl helpers
 
 dev-vcs/subversion -dso
-
-www-client/uzbl helpers
