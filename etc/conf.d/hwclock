@@ -7,7 +7,7 @@ clock="UTC"
 # If you want to set the Hardware Clock to the current System Time 
 # (software clock) during shutdown, then say "YES" here.
 # You normally don't need to do this if you run a ntp daemon.
-clock_systohc="NO"
+clock_systohc="YES"
 
 # If you wish to pass any other arguments to hwclock during bootup,
 # you may do so here. Alpha users may wish to use --arc or --srm here.

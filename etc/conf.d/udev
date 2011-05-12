@@ -16,7 +16,7 @@ persistent_cd_disable="no"
 # custom device nodes that udev does not handle/know about.
 #
 # As this option is fragile, we recommend you
-# to create your devices in /lib64/udev/devices.
+# to create your devices in /lib/udev/devices.
 # These will be copied to /dev on boot.
 #rc_device_tarball="NO"
 

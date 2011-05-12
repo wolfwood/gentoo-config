@@ -1,2 +1,2 @@
 # too many files passed to gcc
-dev-libs/openssl
+#dev-libs/openssl

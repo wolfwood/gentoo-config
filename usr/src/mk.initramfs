@@ -2,6 +2,6 @@ INITRAM=/usr/src/initram
 cp /bin/busybox.static ${INITRAM}/bin/busybox
 cp /sbin/cryptsetup ${INITRAM}/bin/cryptsetup
 cp /sbin/lvm.static ${INITRAM}/bin/lvm
-cp /sbin/mdadm.static ${INITRAM}/bin/mdadm
+cp /sbin/mdadm ${INITRAM}/bin/mdadm
 
 cp /sbin/udevadm ${INITRAM}/bin

@@ -6,14 +6,33 @@ sys-fs/mdadm static
 sys-apps/busybox static -pam savedconfig
 dev-libs/libgcrypt static-libs
 dev-libs/libgpg-error static-libs
+dev-libs/popt static-libs
+
+# browser hax
+dev-db/sqlite secure-delete unlock-notify
+www-client/uzbl helpers
+
+#speed up FF?
+www-client/firefox custom-optimization
+net-libs/xulrunner custom-optimization
+
+# make portage stop whinging
+virtual/ffmpeg encode
+dev-vcs/subversion -dso
 
 # for loop optimization
 sys-devel/gcc graphite 
 #lto
 dev-libs/ppl lpsol
 
-# browser hax
-dev-db/sqlite secure-delete
-www-client/uzbl helpers
+# super term
+x11-terms/rxvt-unicode 256-color force-hints
 
-dev-vcs/subversion -dso
+# xomb 
+app-emulation/bochs debugger
+
+# avoid mDNS vs. avahi confict, enable privilege dropping
+net-misc/ntp -zeroconf caps
+
+# avoid doing something stupid
+sys-boot/syslinux -custom-cflags
