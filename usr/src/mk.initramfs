@@ -1,0 +1,5 @@
+INITRAM=/usr/src/initram
+cp /bin/busybox.static ${INITRAM}/bin/busybox
+cp /sbin/mdadm ${INITRAM}/bin/mdadm
+
+cp /sbin/udevadm ${INITRAM}/bin

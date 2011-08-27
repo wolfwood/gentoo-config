@@ -1,0 +1,32 @@
+#!/bin/sh
+
+rescue_shell() {
+	echo "ejecting to a shell"
+	busybox --install -s
+	exec /bin/sh
+}
+
+mount -t proc none /proc || rescue_shell
+mount -t sysfs none /sys || rescue_shell
+mount -t devtmpfs none /dev || rescue_shell
+#CMDLINE=`cat /proc/cmdline`
+
+#wait a little to avoid trailing kernel output
+sleep 5 || rescue_shell
+
+#raid
+/bin/mdadm --assemble /dev/md2 /dev/sd[abcde]3 || rescue_shell
+
+#root filesystem
+mount -o ro /dev/md2 /newroot || rescue_shell
+
+#unmount pseudo FS
+umount /dev || rescue_shell
+umount /sys || rescue_shell
+umount /proc || rescue_shell
+
+
+cat /etc/msg
+
+#root switch
+exec switch_root /newroot /sbin/init || rescue_shell

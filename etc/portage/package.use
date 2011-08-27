@@ -1,0 +1,10 @@
+sys-fs/mdadm static
+sys-apps/busybox static -pam
+sys-boot/grub -custom-cflags
+
+# shut up portage
+sys-fs/udev hwdb extras
+dev-vcs/subversion -dso
+
+# super term
+x11-terms/rxvt-unicode -vanilla 256-color force-hints
