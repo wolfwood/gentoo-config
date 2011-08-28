@@ -10,6 +10,7 @@ opt
 proc
 sbin
 sys
+tmp
 
 !usr
 
