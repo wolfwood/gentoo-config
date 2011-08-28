@@ -6,6 +6,10 @@ sys-boot/grub -custom-cflags
 sys-fs/udev hwdb extras
 dev-vcs/subversion -dso
 net-misc/ntp -zeroconf caps
+media-gfx/imagemagick -perl
 
 # super term
 x11-terms/rxvt-unicode -vanilla 256-color force-hints
+
+# don't sleep screen
+media-video/mplayer2 xscreensaver
