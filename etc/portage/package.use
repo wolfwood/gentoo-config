@@ -5,6 +5,7 @@ sys-boot/grub -custom-cflags
 # shut up portage
 sys-fs/udev hwdb extras
 dev-vcs/subversion -dso
+net-misc/ntp -zeroconf caps
 
 # super term
 x11-terms/rxvt-unicode -vanilla 256-color force-hints

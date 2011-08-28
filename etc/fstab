@@ -17,8 +17,8 @@
 /dev/md1		/boot		ext2		noauto,noatime	1 2
 /dev/md2		/		ext4		noatime		0 1
 /dev/md3		/home		ext4		noatime		0 2
-/dev/md4		/mnt/media	ext4		noatime		0 2
-/dev/md5		/mnt/backup	ext4		noatime		0 2
+/dev/md5		/mnt/media	ext4		noatime		0 2
+/dev/md4		/mnt/backup	ext4		noatime		0 2
 /dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
 
 proc			/proc		proc		defaults	0 0
