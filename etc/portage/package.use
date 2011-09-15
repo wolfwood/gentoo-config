@@ -11,5 +11,8 @@ media-gfx/imagemagick -perl
 # super term
 x11-terms/rxvt-unicode -vanilla 256-color force-hints
 
+# electic sheep uses mplays, and should let screen sleep
+media-video/mplayer -xscreensaver
+
 # don't sleep screen
 media-video/mplayer2 xscreensaver
