@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Uzbl
+Comment=Web Browser
+Exec=uzbl-browser %U
+Type=Application
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+Categories=Network;WebBrowser
